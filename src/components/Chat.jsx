@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Utility function to escape HTML entities
 const escapeHtml = (text) => {
   const div = document.createElement('div');
   div.innerText = text;
@@ -9,8 +8,7 @@ const escapeHtml = (text) => {
 };
 
 const ChatRoom = ({ token }) => {
-  // Assuming currentUserId is extracted from the token or some API response
-  const currentUserId = '12345'; // Replace this with actual logic to get user ID from token
+  const currentUserId = '12345';
   const [messages, setMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
   const [currentMessage, setCurrentMessage] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
@@ -95,8 +93,8 @@ const ChatRoom = ({ token }) => {
       const { latestMessage } = await response.json();
       const newMessage = {
         ...latestMessage,
-        userId: currentUserId, // Use the correct currentUserId here
-        username: 'Du', // For setting the username to 'Du' for the current user
+        userId: currentUserId, 
+        username: 'Du', 
       };
 
       setMessages((prevMessages) => {
@@ -136,7 +134,7 @@ const ChatRoom = ({ token }) => {
           localStorage.setItem('messages', JSON.stringify(updatedMessages));
           return updatedMessages;
         });
-      }, 1000); // Simulating delay for auto-reply
+      }, 1000);
     }
   };
 
