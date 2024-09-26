@@ -106,14 +106,14 @@ const Login = ({ setToken, setUserId, csrfToken }) => {
               variant="success"
               className="w-100 mb-3"
             >
-              Login
+              Logga in
             </Button>
             <NavLink to="/">
               <Button
                 variant="outline-success"
                 className="w-100"
               >
-                No account? Register first!
+                Inget konto, regristera dig nu!
               </Button>
             </NavLink>
           </Form>

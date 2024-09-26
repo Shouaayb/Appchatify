@@ -73,10 +73,10 @@ const NavigationSidebar = ({ authToken, setAuthToken }) => { // Uppdaterat prop-
             {!authToken ? (
               <>
                 <li className="nav-item">
-                  <Link to="/" className="nav-link">Register</Link>
+                  <Link to="/" className="nav-link">Registrera</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/login" className="nav-link">Login</Link>
+                  <Link to="/login" className="nav-link">Logga in</Link>
                 </li>
               </>
             ) : (
