@@ -1,0 +1,58 @@
+/* Inkludera Bootstrap CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Globala inställningar */
+:root {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Anpassad stil för body */
+body {
+    padding: 3rem;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+/* Logotypstilar */
+.logo {
+    max-height: 5.5em;
+    padding: 1.25em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 1.5em rgba(100, 108, 255, 0.6));
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.6));
+}
+
+/* Kortkomponent */
+.card {
+    padding: 2.5em;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text för dokumentationslänkar */
+.read-the-docs {
+    color: #7a7a7a;
+    font-size: 1rem;
+    margin-top: 1.5em;
+    display: inline-block;
+}
+
+.read-the-docs:hover {
+    color: #525252;
+}

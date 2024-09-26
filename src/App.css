@@ -1,0 +1,66 @@
+/* Anpassade stilar för applikationen */
+
+#app-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 2.5rem;
+  text-align: left;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.brand-logo {
+  max-height: 5.5em;
+  padding: 1.25em;
+  transition: transform 0.4s ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.2);
+}
+
+.brand-logo.react:hover {
+  filter: hue-rotate(180deg);
+}
+
+@keyframes spin-logo {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:first-of-type .brand-logo {
+      animation: spin-logo 15s linear infinite;
+  }
+}
+
+.card-container {
+  padding: 2.5em;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.docs-link {
+  color: #777;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.docs-link:hover {
+  color: #333;
+}
