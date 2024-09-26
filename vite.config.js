@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-router-dom', 'bootstrap/dist/css/bootstrap.min.css'],
+      // external: ['react-router-dom'],  // Ta bort den här raden!
       output: {
         globals: {
-          'react-router-dom': 'ReactRouterDOM',
-        },
-      },
-    },
-  },
+          'react-router-dom': 'ReactRouterDOM'
+        }
+      }
+    }
+  }
 });
