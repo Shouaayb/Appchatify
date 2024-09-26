@@ -2,10 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
-export default {
+export default defineConfig({
+  plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['bootstrap/dist/css/bootstrap.min.css']
-    }
-  }
-}
+      external: ['react-router-dom', 'bootstrap/dist/css/bootstrap.min.css'],
+      output: {
+        globals: {
+          'react-router-dom': 'ReactRouterDOM',
+        },
+      },
+    },
+  },
+});
